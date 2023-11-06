@@ -1,0 +1,20 @@
+Output dir: C:\Users\NickSherman\Dropbox\C64\Projects\Burger Time\scripts\game\system\bin
+parsing
+Got 32 errors and 0 warnings while executing:
+  (C:\Users\NickSherman\Dropbox\C64\Projects\Burger Time\scripts\game\system\disk.asm 42:11) Error: Unknown symbol 'VIC'
+  (C:\Users\NickSherman\Dropbox\C64\Projects\Burger Time\scripts\game\system\disk.asm 43:11) Error: Unknown symbol 'VIC'
+  (C:\Users\NickSherman\Dropbox\C64\Projects\Burger Time\scripts\game\system\disk.asm 45:11) Error: Unknown symbol 'MAIN'
+  (C:\Users\NickSherman\Dropbox\C64\Projects\Burger Time\scripts\game\system\disk.asm 48:11) Error: Unknown symbol 'UTILITY'
+  (C:\Users\NickSherman\Dropbox\C64\Projects\Burger Time\scripts\game\system\disk.asm 85:11) Error: Unknown symbol 'MAIN'
+  ...
+
+            sta $d404+14 
+
+      lda #0
+      sta VIC.SPRITE_ENABLE
+          ^
+
+Error: Unknown symbol 'VIC'
+at line 42, column 11 in disk.asm
+
+

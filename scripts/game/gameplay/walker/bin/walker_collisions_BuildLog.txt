@@ -1,0 +1,20 @@
+Output dir: C:\Users\NickSherman\Dropbox\C64\Projects\Burger Time\scripts\game\gameplay\walker\bin
+parsing
+Got 68 errors and 0 warnings while executing:
+  (C:\Users\NickSherman\Dropbox\C64\Projects\Burger Time\scripts\game\gameplay\walker\walker_collisions.asm 8:7) Error: Unknown symbol 'CharY'
+  (C:\Users\NickSherman\Dropbox\C64\Projects\Burger Time\scripts\game\gameplay\walker\walker_collisions.asm 17:7) Error: Unknown symbol 'CharX'
+  (C:\Users\NickSherman\Dropbox\C64\Projects\Burger Time\scripts\game\gameplay\walker\walker_collisions.asm 22:7) Error: Unknown symbol 'PLOT'
+  (C:\Users\NickSherman\Dropbox\C64\Projects\Burger Time\scripts\game\gameplay\walker\walker_collisions.asm 24:7) Error: Unknown symbol 'ZP'
+  (C:\Users\NickSherman\Dropbox\C64\Projects\Burger Time\scripts\game\gameplay\walker\walker_collisions.asm 34:7) Error: Unknown symbol 'ZP'
+  ...
+
+  //txa
+  //sta $d020
+
+  lda CharY, x
+      ^
+
+Error: Unknown symbol 'CharY'
+at line 8, column 7 in walker_collisions.asm
+
+

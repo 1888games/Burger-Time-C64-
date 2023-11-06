@@ -1,0 +1,20 @@
+Output dir: /Users/nick/Dropbox/C64/Projects/Complete/Burger Time/scripts/game/screens/bin
+parsing
+Got 92 errors and 0 warnings while executing:
+  (/Users/nick/Dropbox/C64/Projects/Complete/Burger Time/scripts/game/screens/game.asm 19:7) Error: Unknown symbol 'ENEMY'
+  (/Users/nick/Dropbox/C64/Projects/Complete/Burger Time/scripts/game/screens/game.asm 24:7) Error: Unknown symbol 'MAIN'
+  (/Users/nick/Dropbox/C64/Projects/Complete/Burger Time/scripts/game/screens/game.asm 26:7) Error: Unknown symbol 'MAIN'
+  (/Users/nick/Dropbox/C64/Projects/Complete/Burger Time/scripts/game/screens/game.asm 34:7) Error: Unknown symbol 'MAIN'
+  (/Users/nick/Dropbox/C64/Projects/Complete/Burger Time/scripts/game/screens/game.asm 35:7) Error: Unknown symbol 'PETER'
+  ...
+
+
+  lda #1
+  sta CurrentLevel
+  sta ENEMY.LevelID
+      ^
+
+Error: Unknown symbol 'ENEMY'
+at line 19, column 7 in game.asm
+
+

@@ -1,0 +1,13 @@
+Output dir: /Users/nick/Dropbox/C64/Projects/Burger Time/scripts/data/bin
+parsing
+flex pass 1
+
+
+  * = $c400 "Sprites" //Start at frame #16
+  .import binary "../assets/sprites/burger - sprites.bin"
+  ^
+
+Error: Can't open file '../assets/sprites/burger - sprites.bin'
+at line 4, column 3 in assets.asm
+
+
