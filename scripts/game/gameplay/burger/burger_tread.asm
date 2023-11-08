@@ -41,7 +41,6 @@
 			lda ChunkDepth, x
 			beq NoCascade
 
-			lda ChunkDepth, x
 			cmp #3
 			bcs BurgerFall
 

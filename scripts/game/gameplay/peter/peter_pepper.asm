@@ -225,8 +225,13 @@
 			lda ENEMY.State, y
 			bmi Done
 
+			cmp #ENEMY.ENEMY_PEPPERED
+			beq CanPepper
+
 			cmp #ENEMY.ENEMY_AI
 			bne EndLoop
+
+		CanPepper:
 
 			jsr CheckEnemy
 
@@ -248,8 +253,8 @@
 
 	CheckEnemy: {
 
-		lda WALKERS.DelayTimer, y
-		bne NoStun
+		//lda WALKERS.DelayTimer, y
+		//bne NoStun
 
 		lda WALKERS.PosY, y
 		sec

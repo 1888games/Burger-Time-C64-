@@ -1,0 +1,77 @@
+Output dir: C:\Users\NickSherman\Dropbox\C64\Projects\Complete\Burger Time\scripts\bin
+parsing
+flex pass 1
+flex pass 2
+flex pass 3
+Output pass
+Writing prg file: C:\Users\NickSherman\Dropbox\C64\Projects\Complete\Burger Time\scripts\bin\main.prg
+
+Memory Map
+----------
+Default-segment:
+  *$0002-$0022 Temp vars zero page
+  *$0023-$002e Backup Addresses
+  *$002f-$006e Char Addresses
+  *$006f-$00ae Colour Addresses
+  *$00af-$00ee Screen Addresses
+  $0801-$080d Basic
+  $080e-$080d Basic End
+  $0810-$0832 Hi score_Data
+  $0840-$0881 Modules
+  $0882-$09d1 IRQ
+  $09d2-$0a29 Utility
+  $0a2a-$0a3a Input
+  $0a3b-$0aaf Joystick
+  $0ab0-$0bfa Maploader
+  $0bfb-$0c36 -Plot
+  $0c37-$0d3b -Random
+  $0d3c-$1102 -Sound
+  $1103-$13c7 MAin Loop end
+  $13c8-$172e Position
+  $172f-$1cf3 Position
+  $1cf4-$257f Peter
+  $2580-$2f6a Burger
+  $2f6b-$3310 Bump Burger
+  $3311-$33dd Collide Right
+  $33de-$33eb Pos X
+  $33ec-$33f9 Pos Y
+  $33fa-$3440 Char X
+  $3441-$3455 Walker State
+  $3456-$348d Blocked right
+  $348e-$3891 Delay Timer
+  $3892-$3b89 Walking AI
+  $3b8a-$3ba8 Enemy State
+  $3ba9-$3dd4 WalkSpeed
+  $3dd5-$3fed Bonus
+  $3fee-$44a8 Score
+  $44a9-$44ad Main
+  $44ae-$4571 Entry
+  $9000-$8fff Title Map Data
+  $9000-$93bf Title Tiles
+  $93c0-$94bf Title Colours
+  $94c0-$95c3 Cast
+  $95c4-$96c7 Table
+  $96c8-$97cb Scoring
+  $97cc-$98cf Game Ready
+  $98d0-$99d3 Deco
+  $99d4-$9ad7 Enter Name
+  $a000-$a5d2 sid
+  $a600-$a7ff Game ZP Backup
+  $b000-$afff Map Data
+  $b000-$b0ef Game Tiles
+  $b0f0-$b1ef Game Colours
+  $b1f0-$b2f3 Map 0
+  $b2f4-$b3f7 Map 1
+  $b3f8-$b4fb Map 2
+  $b4fc-$b5ff Map 3
+  $b600-$b703 Map 4
+  $b704-$b807 Map 5
+  $b900-$b9bf Bonus Chars
+  $c400-$ddff Sprites
+  $e800-$efff Title Charset
+  $f000-$f7ff Charset
+  $f800-$fbff Screen Backup
+  $fc00-$fffd Colour Backup
+
+Writing Vice symbol file: C:\Users\NickSherman\Dropbox\C64\Projects\Complete\Burger Time\scripts\bin\main.vs
+Writing Symbol file: main.sym

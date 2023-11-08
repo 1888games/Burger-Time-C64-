@@ -33,6 +33,16 @@
 	Colours:		.byte WHITE + 8, WHITE + 8, RED + 8
 	Colour:			.byte 0
 
+	BonusTimes:		.byte 12, 8, 4, 0
+					.byte 13, 7, 5, 0
+					.byte 14, 8, 4, 0
+					.byte 28, 22, 16, 12
+					.byte 9, 6, 3
+					.byte 14, 12, 7, 3
+
+
+	BonusCount:		.byte 0
+
 	NewGame: {
 
 	
@@ -65,7 +75,48 @@
 		rts
 	}
 
+
+	CheckBonus: {
+
+
+		stx ZP.X
+		sty ZP.Y
+
+		lda BURGER.TotalLayers
+
+		lda GAME.MapLevel
+		asl
+		asl
+		clc
+		adc BonusCount
+		tay
+		lda BonusTimes, y
+
+		cmp BURGER.TotalLayers
+		bne NotSpawn
+
+		inc BonusCount
+
+		jsr SpawnBonus
+
+		NotSpawn:
+
+
+		ldx ZP.X
+		ldy ZP.Y
+
+
+
+
+
+
+
+		rts
+	}
 	NewLevel: {
+
+		lda #0
+		sta BonusCount
 
 		lda RandomChance
 		sec
@@ -360,6 +411,7 @@
 		lda WALKERS.DeadStatus + PETER_SPRITE
 		bpl Exit
 
+
 		lda ZP.Counter
 		and #%00000001
 		beq Exit
@@ -379,16 +431,7 @@
 		lda BonusDisplayed
 		bne RemoveBonus
 
-		jsr RANDOM.Get
-		cmp #RandomOffset
-		bcc Exit
-
-		cmp RandomChance
-		bcs Exit
-
-	NewBonus:
-
-		jmp SpawnBonus
+		rts
 
 	RemoveBonus:
 

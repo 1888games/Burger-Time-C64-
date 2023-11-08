@@ -224,6 +224,36 @@
 	}
 
 
+	ResetTread: {
+
+
+		ldx #0
+		lda #0
+
+		Loop:
+
+			sta ChunkDepth, x
+			sta ChunkTrodden, x
+
+			inx
+			cpx #MAX_LAYERS * 4
+			bcc Loop
+
+		ldx #0
+
+		Loop2:
+
+			sta Chunk1_Depth, x
+
+			inx
+			cpx #MAX_LAYERS
+			bcc Loop2
+
+
+		rts
+	}
+
+
 	ReloadLevel: {
 
 

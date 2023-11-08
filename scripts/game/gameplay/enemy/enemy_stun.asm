@@ -31,12 +31,58 @@
 		rts
 	}
 
+	PepX:	.byte 0
+	PepY:	.byte 0
+
+	CheckOthers: {
+
+		ldx #0
+
+		Loop:
+
+			stx ZP.X
+
+			lda State, x
+			cmp #ENEMY_PEPPERED
+			bne EndLoop
+
+			lda #50
+			sta PepperTimer, x
+
+			lda #0
+			sta PepperStage, x
+
+			lda ENEMY.Type, x
+			tax
+
+			lda StunFrame, x
+			clc
+			adc #1
+			ldx ZP.X
+			sta WALKERS.Frame, x
+
+		EndLoop:
+
+			inx
+			cpx #MAX_ENEMIES
+			bcc Loop
+
+
+		rts
+	}
 
 	MakePeppered: {
 
 		lda State, y
 		cmp #ENEMY_AI
-		bne NoPepper
+		beq CanPepper
+
+		cmp #ENEMY_PEPPERED
+		beq CanPepper
+
+		rts
+
+	CanPepper:
 
 		stx ZP.Y2
 
@@ -51,11 +97,17 @@
 		lda #50
 		sta PepperTimer, y
 
+
 		lda #0
 		sta PepperStage, y
 
 		lda #1
 		sta WALKERS.DelayTimer, y
+
+
+		lda State, y
+		cmp #ENEMY_PEPPERED
+		beq AlreadyPeppered
 
 		lda ENEMY.Colour, y
 		sta OldColour, y
@@ -63,8 +115,14 @@
 		lda #WHITE
 		sta ENEMY.Colour, y
 
+
+
 		lda #ENEMY_PEPPERED
 		sta State, y
+
+	AlreadyPeppered:
+
+		//jsr CheckOthers
 		
 		ldx ZP.Y2
 		// TODO:SFX

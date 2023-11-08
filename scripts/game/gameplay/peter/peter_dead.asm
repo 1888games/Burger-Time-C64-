@@ -14,6 +14,8 @@
 
 	MakeDead: {
 
+
+
 		lda #0
 		sta WALKERS.DeadStatus + PETER_SPRITE
 		sta FlailCounter
@@ -70,8 +72,6 @@
 			cmp #NUMBER_FLAILS
 			bcc NoRespawn
 
-			pla
-			pla
 
 			jmp DecreaseLives
 			

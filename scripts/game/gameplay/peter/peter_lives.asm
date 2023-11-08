@@ -97,6 +97,8 @@
 	}
 
 	DecreaseLives: {
+
+		jsr BURGER.ResetTread
 		
 		dec LivesRemaining
 		bpl NotGameOver
@@ -112,12 +114,17 @@
 
 	NotGameOver:
 
+		lda GAME.LevelComplete
+		bne Exit
+
+		
 		sei
 		ldx #$FF
 		txs
 		
 		jmp READY.Show 
 
+		Exit:
 
 
 	}

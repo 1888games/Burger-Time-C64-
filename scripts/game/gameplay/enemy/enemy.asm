@@ -504,6 +504,9 @@
 		lda WALKERS.DeadStatus + PETER_SPRITE
 		bpl NoCollision
 
+		lda GAME.LevelComplete
+		bne NoCollision
+
 		lda ENEMY.State, x
 		cmp #ENEMY_AI
 		bne NoCollision

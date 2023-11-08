@@ -157,6 +157,10 @@
 
 	StillToGo:
 
+
+		jsr BONUS.CheckBonus
+
+
 		lda #0
 		sta LayerTimer, x
 
